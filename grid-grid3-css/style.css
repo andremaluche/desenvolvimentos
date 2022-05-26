@@ -47,16 +47,36 @@ img {
     padding: 10px;
 }
 
-/* CSS FLEXBOX 1 */
+/* CSS GRID 3 */
 
-.flex {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 800px;
+.grid3 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
     margin: 0 auto;
+    max-width: 800px;
+    padding: 10px;
 }
 
-.flex > div {
-    flex: 1 1 200px;
-    margin: 10px;
+.grid3-item:nth-child(1) {
+    grid-row: 1 / 3;
+}
+
+.grid3-item {
+    display: grid;
+}
+
+.grid3-item img {
+    grid-column: 1;
+    grid-row: 1 / 3;
+    align-self: flex-end;
+}
+
+.grid3-item p {
+    background-color: rgba(0, 0, 0, 0.603);
+    padding: 10px;
+    color: white;
+    grid-column: 1;
+    grid-row: 2;
+    align-items: flex-end;
 }

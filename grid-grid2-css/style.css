@@ -47,16 +47,31 @@ img {
     padding: 10px;
 }
 
-/* CSS FLEXBOX 1 */
+/* CSS GRID 2 */
 
-.flex {
-    display: flex;
-    flex-wrap: wrap;
+.grid2 {
+    display: grid;
+    grid-template-columns: 1fr 200px;
+    gap: 20px;
     max-width: 800px;
+    padding: 10px;
     margin: 0 auto;
 }
 
-.flex > div {
-    flex: 1 1 200px;
-    margin: 10px;
+.sidebar > div {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 600px) {
+    .grid2 {
+        grid-template-columns: 1fr;        
+    }
+    .sidebar {
+        display: flex;
+        overflow-x: scroll;
+    }
+    .sidebar > div {
+        flex: 1 0 200px;
+        margin: 0 10px;
+    }
 }
